@@ -1,18 +1,29 @@
-FROM ubuntu:14.04
-MAINTAINER Milton Pividori <miltondp@gmail.com>
+FROM ubuntu:16.04
+MAINTAINER Leandro Bugnon <lbugnon@gmail.com>
 
 # Web Demo Builder - Base Docker image for Python 3.x
 
 ENV python_env="/python_env"
 
 # Install base packages
-RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get update && apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive
+
+# tzdata issue
+ENV TZ 'Europe/Amsterdam'
+RUN echo $TZ > /etc/timezone && \
+  apt-get update && apt-get install -y tzdata && \
+  rm /etc/localtime && \
+  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+  dpkg-reconfigure -f noninteractive tzdata && \
+  apt-get clean
+  
+
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
       build-essential \
       pkg-config \
       gfortran \
       libatlas-base-dev \
-      libatlas3gf-base \
       fonts-lyx \
       libfreetype6-dev \
       libpng-dev \
