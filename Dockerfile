@@ -26,16 +26,16 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 
 # python packages
-RUN pip3 install -U virtualenv==12.0.7
+RUN pip3 install -U virtualenv
 RUN virtualenv ${python_env}
 
 COPY install_python_module /usr/local/bin/
-RUN install_python_module pip==6.0.8
-RUN install_python_module numpy==1.9.2
-RUN install_python_module scipy==0.15.1
-RUN install_python_module scikit-learn==0.15.2
-RUN install_python_module matplotlib==1.4.3
-RUN install_python_module pandas==0.15.2
+RUN install_python_module pip
+RUN install_python_module numpy
+RUN install_python_module scipy
+RUN install_python_module scikit-learn
+RUN install_python_module matplotlib
+RUN install_python_module pandas
 RUN install_python_module torch
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
