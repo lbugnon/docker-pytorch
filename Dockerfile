@@ -47,7 +47,9 @@ RUN install_python_module scipy
 RUN install_python_module scikit-learn
 RUN install_python_module matplotlib
 RUN install_python_module pandas
+RUN install_python_module PIL
 RUN install_python_module torch
+RUN install_python_module torchvision
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
 
