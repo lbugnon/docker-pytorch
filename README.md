@@ -1,7 +1,7 @@
-# Virtual environment for Python 3.4 #
+# Virtual environment for Python 3.5 #
 
 ## Description ##
-This is a Docker image with Python 3.4. The Python version is the one included in Ubuntu 14.04. In addition, it contains several Python packages installed (you can get more details by inspecting the [Dockerfile](https://bitbucket.org/sinc-lab/webdemo-base-python3/src/default/Dockerfile)):
+This is a Docker image with Python 3.5. The Python version is the one included in Ubuntu 16.04. In addition, it contains several Python packages installed (you can get more details by inspecting the [Dockerfile](https://bitbucket.org/sinc-lab/webdemo-base-python3/src/default/Dockerfile)):
 
 ## Web demo builder ##
 This Docker image can be used by the Web demo builder as a Python 3 *virtual environment*. You don't need to download it or use it directly from here, just use the Web demo builder interface, select the Python programming language, and specify this virtual environment: `sinclab/webdemo-base-python3`
