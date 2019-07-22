@@ -51,6 +51,8 @@ RUN install_python_module pandas
 RUN install_python_module PIL
 RUN install_python_module torch
 RUN install_python_module torchvision
+RUN install_python_module nltk
+RUN install_python_module ipdb
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
 
