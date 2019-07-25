@@ -56,7 +56,7 @@ RUN install_python_module ipdb
 RUN install_python_module flair
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
-RUN [ "${python_env}/bin/python", "-c", "import nltk; nltk.download('punkt')" ]
+RUN [ "/usr/local/bin/python", "-c", "import nltk; nltk.download('punkt')" ]
 
 
 # Create a new user "developer".
