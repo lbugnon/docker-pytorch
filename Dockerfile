@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:19.10
 MAINTAINER Leandro Bugnon <lbugnon@gmail.com>
 
 # Web Demo Builder - Base Docker image for Python 3.x
