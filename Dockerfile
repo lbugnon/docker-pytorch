@@ -44,7 +44,7 @@ RUN virtualenv ${python_env}
 COPY install_python_module /usr/local/bin/
 RUN install_python_module pip
 RUN install_python_module nltk
-RUN python3 -m nltk.downloader punkt
+RUN [ "python3", "-c", "import nltk; nltk.download('punkt')" ]
 RUN install_python_module numpy
 RUN install_python_module scipy
 RUN install_python_module scikit-learn
