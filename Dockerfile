@@ -43,6 +43,8 @@ RUN virtualenv ${python_env}
 
 COPY install_python_module /usr/local/bin/
 RUN install_python_module pip
+RUN install_python_module nltk
+RUN python3 -m nltk.downloader punkt
 RUN install_python_module numpy
 RUN install_python_module scipy
 RUN install_python_module scikit-learn
@@ -51,10 +53,8 @@ RUN install_python_module pandas
 RUN install_python_module PIL
 RUN install_python_module torch
 RUN install_python_module torchvision
-RUN install_python_module nltk
 RUN install_python_module ipdb
 RUN install_python_module flair
-RUN python -m nltk.downloader punkt
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
 
