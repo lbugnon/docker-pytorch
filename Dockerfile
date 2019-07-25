@@ -53,6 +53,7 @@ RUN install_python_module torch
 RUN install_python_module torchvision
 RUN install_python_module nltk
 RUN install_python_module ipdb
+RUN install_python_module flair
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
 
