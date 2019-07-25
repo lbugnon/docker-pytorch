@@ -54,6 +54,7 @@ RUN install_python_module torchvision
 RUN install_python_module nltk
 RUN install_python_module ipdb
 RUN install_python_module flair
+RUN python -m nltk.downloader punkt
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
 
