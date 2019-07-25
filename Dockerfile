@@ -58,7 +58,6 @@ RUN install_python_module flair
 RUN [ "python_env/bin/python", "-c", "import nltk; nltk.download('punkt')" ]
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
-RUN ln -s ${python_env}/lib/python3.7/site-packages/nltk/  /usr/local/lib/python3.7/site-packages/nltk
 
 
 # Create a new user "developer".
